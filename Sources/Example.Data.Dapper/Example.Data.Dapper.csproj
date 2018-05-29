@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.50.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Core.Data.Dapper\Core.Data.Dapper.csproj" />
+    <ProjectReference Include="..\Example.Data.Abstractions\Example.Data.Abstractions.csproj" />
+    <ProjectReference Include="..\Example.Data.Entities\Example.Data.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
