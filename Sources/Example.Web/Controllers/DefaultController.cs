@@ -4,19 +4,16 @@ using Example.Data.Abstractions;
 
 namespace Example.Web.Controllers
 {
-  public class DefaultController : Controller
+  public class DefaultController : Core.Infrastructure.Mvc.Controllers.ControllerBase
   {
-    private readonly IStorage storage;
-
-    public DefaultController(IStorage storage)
+    public DefaultController(IStorage storage) : base(storage)
     {
-      this.storage = storage;
     }
 
     [HttpGet]
     public IActionResult Index()
     {
-      return this.Json(this.storage.GetRepository<IEntityRepository>().All());
+      return this.Json(this.Storage.GetRepository<IEntityRepository>().All());
     }
   }
 }
