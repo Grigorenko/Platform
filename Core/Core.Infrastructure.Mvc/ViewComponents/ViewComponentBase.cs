@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Core.Data;
 
-namespace Core.Infrastructure.Mvc.Controllers
+namespace Core.Infrastructure.Mvc.ViewComponents
 {
-  public abstract class ControllerBase : Controller
+  public abstract class ViewComponentBase : ViewComponent
   {
     public IStorage Storage { get; private set; }
 
-    public ControllerBase(IStorage storage)
+    public ViewComponentBase(IStorage storage)
     {
       this.Storage = storage;
     }
